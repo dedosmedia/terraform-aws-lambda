@@ -77,6 +77,12 @@ variable "keep_remotely" {
   default     = false
 }
 
+variable "triggers" {
+  description = " A map of arbitrary strings that, when changed, will force the docker_registry_image resource to be replaced."
+  type        = map(string)
+  default     = {}
+}
+
 variable "platform" {
   description = "The target architecture platform to build the image for."
   type        = string
