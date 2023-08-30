@@ -24,6 +24,7 @@ resource "docker_registry_image" "this" {
   name = docker_image.this.name
 
   keep_remotely = var.keep_remotely
+  triggers = var.triggers
 }
 
 resource "aws_ecr_repository" "this" {
